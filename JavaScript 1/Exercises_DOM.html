@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    Footer Test
+    </div>
+    <script>
+        // 1
+        var containerById = document.getElementById("container");
+        // 2
+        var containerBySelector = document.querySelector("#container");
+        // 3
+        var secondList = document.querySelectorAll(".second");
+        // 4
+        var thirdListOL = document.querySelector("ol .third");
+        // 5
+        //document.getElementById("container").innerText = "Hello!";
+        // 6
+        var footerDiv = document.querySelector(".footer");
+        footerDiv.classList.add("main");
+        // 7
+        footerDiv.classList.remove("main");
+        // 8
+        var newLi = document.createElement("li");
+        // 9
+        newLi.innerText = "four";
+        // 10
+        var listApp = document.querySelector("ul");
+        listApp.appendChild(newLi);
+        // 11
+        var childNodes = document.querySelectorAll("ol li");
+        for (var i = 0; i < childNodes.length; i++) {
+            childNodes[i].style.backgroundColor = "green";
+        }
+        // 12
+        var body = document.getElementsByTagName("body");
+        body[0].removeChild(footerDiv);
+    </script>
+</body>
+</html>
